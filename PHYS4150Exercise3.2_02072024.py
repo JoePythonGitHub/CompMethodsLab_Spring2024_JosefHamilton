@@ -17,7 +17,7 @@ plt.plot(x,y)
 plt.show()
 
 theta = np.linspace(0,24*np.pi)
-r = np.exp(np.cos(theta)) - 2*np.cos(4*(theta)) + (np.sin((theta)/2))**5
+r = np.exp(np.cos(theta)) - 2*np.cos(4*(theta)) + (np.sin((theta)/12))**5
 x = r*np.cos(theta)
 y = r*np.sin(theta)
 
