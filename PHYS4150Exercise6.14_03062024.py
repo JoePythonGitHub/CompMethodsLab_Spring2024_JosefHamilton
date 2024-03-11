@@ -41,10 +41,14 @@ while (E < 19.999):
    y1.append(calculate_y1(w, m, E, h))
    y2.append(calculate_y2(V, E))
    y3.append(calculate_y3(V, E))
-   E += 1
+   E += 0.05
+
+y1=np.array(y1)
+y1[:-1][np.diff(y1) < 0] = np.NaN
 plt.plot(x, y1)
 plt.plot(x, y2)
 plt.plot(x, y3)
+plt.ylim([-3,3])
 plt.xlabel('x - axis')
 plt.ylabel('y - axis')
 plt.title('Quantum Theory')
